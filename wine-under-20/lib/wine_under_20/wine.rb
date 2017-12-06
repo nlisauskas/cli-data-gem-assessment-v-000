@@ -11,7 +11,7 @@ class WineUnder20::Wine
     @@all << self
   end
 
-  def all
+  def self.all
     @@all
   end
 
