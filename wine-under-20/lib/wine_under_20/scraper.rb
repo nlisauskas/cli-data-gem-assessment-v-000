@@ -1,6 +1,4 @@
-class Scraper
-
-  attr_accessor :name, :price, :url, :description
+class WineUnder20::Scraper
 
   def self.scrape_wines
     wines = []
