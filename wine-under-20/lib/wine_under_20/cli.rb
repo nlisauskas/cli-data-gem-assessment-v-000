@@ -9,8 +9,8 @@ class WineUnder20::CLI
   end
 
   def list_wines
-    @wines = WineUnder20::Scraper.scrape_wines
-    @wines.each.with_index(1) do |wine, i|
+    WineUnder20::Scraper.scrape_wines
+    WineUnder20::Wine.all.each.with_index(1) do |wine, i|
       puts "#{i}. #{wine.name} - #{wine.price}"
     end
   end
