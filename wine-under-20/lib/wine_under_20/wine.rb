@@ -2,7 +2,13 @@ class WineUnder20::Wine
   attr_accessor :name, :price, :url, :description
 
   @@all = []
-#move this to a scraper class
+
+  def initialize(name, price, url, description)
+    @name = name
+    @price = price
+    @url = url
+    @description = description
+  end
 
 
 end
