@@ -8,6 +8,7 @@ class WineUnder20::Wine
     @price = price
     @url = url
     @description = description
+    @@all << self
   end
 
 
