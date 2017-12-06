@@ -4,12 +4,12 @@ class WineUnder20::CLI
     puts "Find today's wines under $20 at Binny's. Press enter to continue."
     input = gets.chomp
     #input = gets.chomp
+    WineUnder20::Scraper.scrape_wines
     list_wines
     menu
   end
 
   def list_wines
-    WineUnder20::Scraper.scrape_wines
     WineUnder20::Wine.all.each.with_index(1) do |wine, i|
       puts "#{i}. #{wine.name} - #{wine.price}"
     end
