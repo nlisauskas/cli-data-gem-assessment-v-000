@@ -16,7 +16,7 @@ class WineUnder20::CLI
   end
 
   def menu
-    @wines = WineUnder20::Wine.scrape_wines
+    @wines = WineUnder20::Wine.all
     puts "Enter the number of the deal you'd like more information on or type list to list all wines or type exit to leave."
     input = nil
     while input != "exit"
